@@ -5,9 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font: manrope;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+i.fa, i.fas, i.far, i.fal, i.fab, i.fa *{
+  vertical-align: middle !important;
+  line-height: inherit;
+
 }

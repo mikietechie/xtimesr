@@ -1,0 +1,50 @@
+@import '../../App.scss';
+/* Utilities */
+.bdt-4d26e0 {
+  border-top-color: #4d26e0 !important;
+}
+.bdt-009947 {
+  border-top-color: #009947 !important;
+}
+.bdt-f79227 {
+  border-top-color: #f79227 !important;
+}
+
+
+.data-card {
+  border-color: $bd-color;
+  background-color: #fff;
+  border-radius: 4px 4px 0px 0px;
+  border-top-style: solid;
+  border-top-width: 3px;
+  
+  .menu-btn {
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    box-shadow: none;
+    outline: none;
+    color: #000 !important;
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .dropdown-menu {
+    transform: translateX(-100%) !important;
+  }
+  .delta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0px 4px;
+    border-radius: 4px;
+  }
+  .delta-positve {
+    color: #009947;
+    background-color: rgba(0, 153, 71, 0.1);
+  }
+  .delta-negative {
+    color: #f79227;
+    background-color: rgba(247, 146, 39, 0.1);
+  }
+}
