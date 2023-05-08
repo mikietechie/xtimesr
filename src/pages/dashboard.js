@@ -11,7 +11,7 @@ export default function Dashboard() {
               <h1 style={{fontSize: "32px", fontWeight: 700}}>Welcome back, Kent</h1>
               <p style={{fontSize: "16px"}}>Track, manage and forecast your investment and orders</p>
             </div>
-            <div className="justify-content-end">
+            <div className="justify-content-end d-md-block d-sm-none">
               <div className="input-group mb-3 dashboard-search-input-group">
                 <span className="input-group-text"><i className="fa fa-search"></i></span>
                 <input type="text" className="form-control" placeholder="Search" />

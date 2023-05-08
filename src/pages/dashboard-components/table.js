@@ -1,6 +1,11 @@
 import './table.scss';
+import useBreakpoint from "../../hooks/user-breakpoint";
+
 
 export function DataTable() {
+    const size = useBreakpoint()
+    const fullTable = !(["xs", "sm"]).includes(size)
+
     const date = new Date()
     const tableItems = [
         {date, type: "Deposit", amount: 100.00, status: "Pending", fees: 0.00},
@@ -34,11 +39,11 @@ export function DataTable() {
                         <thead>
                             <tr>
                                 <th scope="col">Transaction Date <i className='fa fa-chevron-down'></i></th>
-                                <th scope="col">Type <i className='fa fa-chevron-down'></i></th>
+                                { fullTable && <th scope="col">Type <i className='fa fa-chevron-down'></i></th>}
                                 <th scope="col">Amount <i className='fa fa-chevron-down'></i></th>
-                                <th scope="col">Fees <i className='fa fa-chevron-down'></i></th>
+                                { fullTable && <th scope="col">Fees <i className='fa fa-chevron-down'></i></th>}
                                 <th scope="col">Status <i className='fa fa-chevron-down'></i></th>
-                                <th scope="col"></th>
+                                { fullTable && <th scope="col"></th>}
                             </tr>
                         </thead>
                         <tbody>
@@ -47,19 +52,19 @@ export function DataTable() {
                                     return (
                                         <tr key={index}>
                                             <td>{item.date.toLocaleString("en-GB")}</td>
-                                            <td>{item.type}</td>
+                                            {fullTable && <td>{item.type}</td>}
                                             <td>{item.amount}</td>
-                                            <td>{item.fees.toFixed(2)}</td>
+                                            {fullTable && <td>{item.fees.toFixed(2)}</td>}
                                             <td>{
                                                 item.status === "Pending" ?
                                                     <span className="badge text-warning">{item.status}</span> :
                                                     <span className="badge text-success">{item.status}</span>
                                             }</td>
-                                            <td>
+                                            {fullTable && <td>
                                                 <button className="btn btn-link">
                                                     <i className="fa fa-ellipsis"></i>
                                                 </button>
-                                            </td>
+                                            </td>}
                                         </tr>
                                     )
                                 })
@@ -67,7 +72,7 @@ export function DataTable() {
                         </tbody>
                     </table>
                 </div>
-                <div className="d-flex justify-content-end">
+                <div className="d-flex justify-content-lg-end justify-content-center">
                     <div className="d-flex">
                         <ul className="pagination">
                             <li className="page-item"><button className="page-link"><i className='fa fa-chevron-left'></i></button></li>

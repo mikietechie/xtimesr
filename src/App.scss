@@ -3,12 +3,31 @@ $bg-color: #fcfdfd;
 $purple: #4D26E0;
 
 .container-fluid {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   aside {
     height: 100vh;
     max-height: 100vh;
     border-right: 1px solid $bd-color;
     background-color: $bg-color;
     overflow-y: auto;
+    
+    &.mobile-aside {
+      height: 100vh;
+      position: fixed;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      top: 0;
+      left: 0;
+      z-index: 99;
+    }
     
     .sidebar {
       background-color: #fff;
@@ -92,24 +111,6 @@ $purple: #4D26E0;
           border-radius: 50%;
         }
       }
-    }
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 98;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    .mobile-sidebar {
-      height: 100vh;
-      position: fixed;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      top: 0;
-      left: 0;
-      z-index: 99;
     }
   }
   main {
