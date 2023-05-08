@@ -11,7 +11,7 @@ export function DataTable() {
     ]
 
     return (
-        <div className="row mb-5 data-table-component">
+        <div className="row data-table-component">
             <div className="col-12">
                 <div className="d-flex justify-content-between">
                     <h2>Recent Transactions</h2>
@@ -23,9 +23,9 @@ export function DataTable() {
                 <div className="d-flex justify-content-between">
                     <div className="d-flex">
                         <div className='btn-group'>
-                            <button className="btn btn-sm btn-light">View All</button>
-                            <button className="btn btn-sm btn-light">Internal</button>
-                            <button className="btn btn-sm btn-light">Withdrawals</button>
+                            <button className="btn btn-sm btn-light btn-bnw">View All</button>
+                            <button className="btn btn-sm btn-light btn-bnw">Internal</button>
+                            <button className="btn btn-sm btn-light btn-bnw">Withdrawals</button>
                         </div>
                     </div>
                 </div>

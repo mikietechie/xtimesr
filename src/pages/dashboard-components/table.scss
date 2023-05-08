@@ -1,13 +1,20 @@
 .data-table-component {
     h2 {
-        font-size: 20px
+        font-size: 20px;
+        color: #0F172A;
+        font-weight: 700;
     }
     .btn-bnw {
-        border: 1px solid #334155;
+        border: 1px solid #E2E8F0;
+        border-radius: 6px;
         background-color: transparent;
-        color: #334155 !important;
+        color: #334155;
+        font-size: 14px;
     }
     table {
+        font-size: 14px;
+        font-weight: 500;
+        color: #475569;
         thead {
             tr {
                 th {
@@ -18,5 +25,7 @@
     .page-link {
         background-color: transparent;
         border: none;
+        font-size: 12px;
+        color: #94A3B8;
     }
 }

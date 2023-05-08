@@ -1,32 +1,33 @@
-import { Button, Dropdown } from 'react-bootstrap';
 import './cards.scss';
-
-function DropdownToggle({children, ...props}) {
-  return (
-    <button className="menu-btn" {...props}><i className="fa fa-ellipsis-v"></i></button>
-  )
-}
+import { useState } from 'react';
 
 function Card({item}) {
+  const [showStatus, setShowStatus] = useState("");
   const { title, color, balance, delta } = item
+
+  function toggleStatus() {
+    setShowStatus(showStatus ? "" : "show");
+  }
+
   return (
     <div className="col-4">
       <div className={`card data-card bdt-${color}`}>
         <div className="card-body">
           <h5 className="card-title mb-4">
             {title}
-            <Dropdown key={item.color} className='float-end'>
-              <Dropdown.Toggle className="menu-btn" id="dropdown-basic" as={DropdownToggle}>
-              </Dropdown.Toggle>
-              <Dropdown.Menu >
-                <Dropdown.Item as={Button}><i className="fa fa-plus"></i>&nbsp;Add Funds</Dropdown.Item>
-                <Dropdown.Item as={Button}><i className="fa fa-right-left"></i>&nbsp;Transfer Funds</Dropdown.Item>
-                <Dropdown.Item as={Button}><i className="fa fa-info"></i>&nbsp;Account Overview</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+            <div class={`float-end ${showStatus} dropdown`} onClick={toggleStatus}>
+              <button class={`menu-btn dropdown-toggle ${showStatus}`}>
+                <i class="fa fa-ellipsis-v"></i>
+              </button>
+              <div x-placement="bottom-start" class={`dropdown-menu ${showStatus}`}>
+                <button type="button" class="dropdown-item btn btn-primary"><i class="fa fa-plus"></i>&nbsp;Add Funds</button>
+                <button type="button" class="dropdown-item btn btn-primary"><i class="fa fa-right-left"></i>&nbsp;Transfer Funds</button>
+                <button type="button" class="dropdown-item btn btn-primary"><i class="fa fa-info"></i>&nbsp;Account Overview</button>
+              </div>
+            </div>
           </h5>
-          <p className="card-text mb-0 pb-0">Current Balance</p>
-          <h3 className="card-text mb-0 pb-0">{balance}</h3>
+          <p className="card-text mb-0 pb-0 current-balance-label">Current Balance</p>
+          <h3 className="card-text mb-0 pb-0 current-balance">{balance}</h3>
           <p className="card-text text-end">
             {
               delta>0 ? (
@@ -64,7 +65,7 @@ export function DataCardsRow() {
     },
   ]
   return (
-    <div className="row mb-5">
+    <div className="row mb-3">
     {
       cardItems.map((item, index) => (
         <Card item={item} key={index} />

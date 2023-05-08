@@ -1,18 +1,96 @@
 $bd-color: #f1f5f9;
 $bg-color: #fcfdfd;
+$purple: #4D26E0;
 
 .container-fluid {
   aside {
     height: 100vh;
+    max-height: 100vh;
     border-right: 1px solid $bd-color;
     background-color: $bg-color;
+    overflow-y: auto;
     
     .sidebar {
       background-color: #fff;
       height: 100%;
 
-      .list-group .list-group-item a:hover {
-        text-decoration: none;
+      h1 {
+        margin-bottom: 16px;
+        font-weight: bold;
+        font-size: 24px;
+      }
+
+      hr {
+        width: 90%;
+      }
+
+      .list-group {
+        gap: 4px;
+
+        .list-group-item {
+          border: none;
+          padding: 0px 0px;
+          margin: 0px initial;
+
+          a {
+            font-size: 16px;
+            padding: 8px 0px;
+            color: #475569;
+          }
+          &.active-link, &:hover {
+            border-right: 3px solid $purple;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .account-setup {
+        width: 90%;
+        background: #F1F5F9;
+        border-radius: 12px;
+        padding: 16px 8px;
+
+        .percentage-chart {
+          width: 56px;
+          height: 56px;
+          border: 2px solid $purple;
+          border-radius: 50%;
+          border-left-color: transparent;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 12px;
+          transform: rotateZ(45deg);
+          span {
+            transform: rotateZ(-45deg);
+          }
+        }
+        h6 {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        p {
+          font-size: 12px;
+          margin-bottom: 0px;
+        }
+        .buttons {
+          button {
+            font-size: 12px;
+          }
+          .finish-setup {
+            color: $purple;
+          }
+        }
+      }
+
+      .sidebar-footer {
+        width: 90%;
+        font-size: 14px;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
       }
     }
     .overlay {
@@ -40,10 +118,12 @@ $bg-color: #fcfdfd;
     padding: 0px;
 
     header {
-      height: 80px;
+      height: 72px;
       border-bottom: 1px solid $bd-color;
       background-color: $bg-color;
       padding: 20px 45px;
+      color: #475569 !important;
+      font-size: 12px !important;
 
       nav {
         .breadcrumbs {
@@ -52,6 +132,7 @@ $bg-color: #fcfdfd;
           vertical-align: middle;
           text-align: center;
           * {
+            color: #475569;
             vertical-align: middle;
             line-height: normal;
           }
@@ -85,6 +166,8 @@ $bg-color: #fcfdfd;
           padding: 0px 4px;
           margin: 0px;
           box-shadow: none;
+          line-height: 22px;
+          font-size: 22px;
         }
       }
     }

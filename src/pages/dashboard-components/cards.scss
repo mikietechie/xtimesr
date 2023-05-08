@@ -13,10 +13,26 @@
 
 .data-card {
   border-color: $bd-color;
+  border-width: 1px;
+  border-style: solid;
   background-color: #fff;
   border-radius: 4px 4px 0px 0px;
-  border-top-style: solid;
   border-top-width: 3px;
+
+  h5 {
+    font-size: 16px;
+  }
+
+  .current-balance-label {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #334155;
+  }
   
   .menu-btn {
     border: none;
@@ -33,8 +49,9 @@
   .dropdown-menu {
     transform: translateX(-100%) !important;
   }
+
   .delta {
-    font-size: 0.8rem;
+    font-size: 14px;
     font-weight: 600;
     padding: 0px 4px;
     border-radius: 4px;

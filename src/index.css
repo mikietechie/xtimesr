@@ -18,7 +18,7 @@ code {
   outline: none !important;
 }
 
-a {
+a, .btn-link {
   text-decoration: none !important;
 }
 
@@ -26,4 +26,9 @@ i.fa, i.fas, i.far, i.fal, i.fab, i.fa *{
   vertical-align: middle !important;
   line-height: inherit;
 
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
 }
