@@ -11,6 +11,23 @@
 }
 
 
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+  margin-left: 4px;
+  position: relative;
+  top: 2px;
+  background: #DBD2F9;
+}
+
+.dot.active {
+  background-color: #4d26e0;
+}
+
+
 .data-card {
   border-color: $bd-color;
   border-width: 1px;

@@ -81,11 +81,22 @@ export function DataCardsRow() {
     <div className="row mb-3">
     {
       cardItems.map((item, index) => (
-        <div className={"col-md-4 col-12 mx-auto mb-sm-3 " + isSmall && index !== currentCard ? "d-none" : ""}>
+        <div className={`col-md-4 col-12 mx-auto mb-sm-3 ${(isSmall && index !== currentCard) && "d-none"}`}>
           <Card item={item} key={index} />
         </div>
       ))
     }
+  {
+    isSmall && (
+      <div className="col-12 pt-3">
+        <div className="d-flex justify-content-center">
+          <span className={`dot ${currentCard === 0 ? "active" : ""}`}></span>
+          <span className={`dot ${currentCard === 1 ? "active" : ""}`}></span>
+          <span className={`dot ${currentCard === 2 ? "active" : ""}`}></span>
+        </div>
+      </div>
+    )
+  }
   </div>
 
   )

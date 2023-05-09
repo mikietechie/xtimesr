@@ -2,6 +2,18 @@ $bd-color: #f1f5f9;
 $bg-color: #fcfdfd;
 $purple: #4D26E0;
 
+.bg-purple {
+  background-color: $purple;
+}
+
+.fg-purple {
+  color: $purple;
+}
+
+.bd-purple {
+  border-color: $purple;
+}
+
 .container-fluid {
   .overlay {
     position: fixed;
@@ -169,6 +181,24 @@ $purple: #4D26E0;
           box-shadow: none;
           line-height: 22px;
           font-size: 22px;
+        }
+      }
+
+      .mobile-header-btns {
+        gap: 8px;
+        button {
+          border-radius: 6px;
+          font-size: 14px;
+          font-weight: 600;
+
+          &.purple-btn {
+            background-color: $purple;
+            color: #F8FAFC;
+          }
+          &.white-btn {
+            background-color: transparent;
+            color: #334155;
+          }
         }
       }
     }

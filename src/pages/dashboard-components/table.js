@@ -18,14 +18,14 @@ export function DataTable() {
     return (
         <div className="row data-table-component">
             <div className="col-12">
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between mb-3">
                     <h2>Recent Transactions</h2>
                     <div className="d-flex">
                         <button className="btn-bnw btn btn-sm mx-1"><i className='fa fa-download'></i> Download</button>
-                        <button className="btn-bnw btn btn-sm d-sm-none d-md-block">View Reports</button>
+                        <button className="btn-bnw btn btn-sm d-none d-md-block">View Reports</button>
                     </div>
                 </div>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between mb-3">
                     <div className="d-flex">
                         <div className='btn-group'>
                             <button className="btn btn-sm btn-light btn-bnw">View All</button>
