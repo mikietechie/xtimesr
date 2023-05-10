@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
+/.firebase
 .pnp.js
 /xtimesn
 # testing
